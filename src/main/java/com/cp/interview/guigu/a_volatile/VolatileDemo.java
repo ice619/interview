@@ -1,4 +1,4 @@
-package com.cp.interview.a_volatile;
+package com.cp.interview.guigu.a_volatile;
 
 import java.util.concurrent.TimeUnit;
 
