@@ -1,4 +1,4 @@
-package com.cp.interview.thread.base.syn;
+package com.cp.interview.thread.base.sync;
 
 /**
  * Description: 演示线程安全问题

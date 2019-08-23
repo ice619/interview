@@ -1,4 +1,4 @@
-package com.cp.interview.thread.base.syn;
+package com.cp.interview.thread.base.sync;
 
 /**
  * Description: 死锁
