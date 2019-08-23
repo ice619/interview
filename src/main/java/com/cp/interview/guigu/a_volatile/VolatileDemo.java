@@ -10,7 +10,8 @@ import java.util.concurrent.TimeUnit;
  */
 
 class MyData{
-    volatile int number = 0;
+//    volatile int number = 0;
+    int number = 0;
 
     public void addT060(){
         this.number = 60;
@@ -21,6 +22,7 @@ class MyData{
 /**
  * 1 验证volatile 可见性
  *      1.1 假如 int number = 0; number变量之前根本没有添加volatile关键字，没有可见性
+ *      volatile强制线程每次读取该值的时候都去“主内存”中取值
  */
 public class VolatileDemo {
 

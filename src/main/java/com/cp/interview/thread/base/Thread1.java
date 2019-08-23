@@ -2,6 +2,7 @@ package com.cp.interview.thread.base;
 
 /**
  * 使用匿名内部类创建线程
+ * join作用是让其他线程变为等待
  */
 public class Thread1 {
 
