@@ -56,6 +56,9 @@ public class CircleArrayQueueDemo {
     }
 }
 
+/**
+ * 数组模拟环形队列
+ */
 class CircleArrayQueue{
     private int maxSize;//最大容量
     //注意这里front 含义调整，指向队列第一个元素，不是前一个了
