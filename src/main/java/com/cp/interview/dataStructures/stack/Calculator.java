@@ -5,7 +5,7 @@ package com.cp.interview.dataStructures.stack;
  */
 public class Calculator {
     public static void main(String[] args) {
-        String expression = "3+2*6-2";
+        String expression = "30+2*6-2";
         //创建俩个栈，一个数栈，一个符号栈
         ArrayStack2 numStack = new ArrayStack2(10);
         ArrayStack2 operStack = new ArrayStack2(10);
@@ -16,6 +16,7 @@ public class Calculator {
         int oper = 0;
         int res = 0;
         char ch = ' ';//将每次扫描得到的char保存到ch
+        String keepNum = "";//用于拼接多位数
         //循环扫描expression
         while(true){
             ch = expression.substring(index,index+1).charAt(0);
@@ -42,7 +43,21 @@ public class Calculator {
                 }
             }else {
                 //如果是数字，则直接入数栈
-                numStack.push(ch - 48);  //这里记得减掉48，因为直接存ch存的是ASCII
+                //numStack.push(ch - 48);  //这里记得减掉48，因为直接存ch存的是ASCII
+                //如果是多为数字，不能立即入数栈，会出错
+                //判断后一位，如果是符号才入栈
+                keepNum += ch;
+
+                //如果ch是表达式最后一位，直接入栈
+                if(index == expression.length() - 1){
+                    numStack.push(Integer.parseInt(keepNum));
+                }else {
+                    //判断后一位如果是数字，就继续扫描，如果是符号，就入栈
+                    if(operStack.isOper(expression.substring(index+1, index+2).charAt(0))){
+                        numStack.push(Integer.parseInt(keepNum));
+                        keepNum = "";
+                    }
+                }
             }
             index ++;
             if(index >= expression.length()){
