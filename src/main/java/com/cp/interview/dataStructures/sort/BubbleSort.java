@@ -29,7 +29,7 @@ public class BubbleSort {
 
         Date date2 = new Date();
         String date2Str = simpleDateFormat.format(date2);
-        System.out.println("排序后时间=" + date2Str);
+        System.out.println("排序后时间=" + date2Str);//11秒
 
 //        System.out.println("排序后");
 //        System.out.println(Arrays.toString(arr));
