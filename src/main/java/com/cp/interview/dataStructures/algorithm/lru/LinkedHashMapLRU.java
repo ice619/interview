@@ -7,6 +7,8 @@ import java.util.Map;
  * LinkedHashMap实现LRU算法
  * accessOrder 为true：按照访问顺序排序，false：按照插入顺序排序(默认)
  * 当accessOrder为true时，get方法和put方法都会调用recordAccess方法使得最近使用的Entry移到双向链表的末尾
+ *
+ * 开发者需要实现LRU算法只需要继承LinkedHashMap并重写removeEldestEntry方法
  */
 public class LinkedHashMapLRU {
     public static void main(String[] args) {
