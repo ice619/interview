@@ -63,7 +63,7 @@ public class HeapSort {
      * 举例{4,6,8,5,9} --》i = 1  得到{4,9,8,5,6}
      * 如果再次调用adjustHeap 传入i=0
      * @param arr
-     * @param i 非叶子节点在数组中所有
+     * @param i 非叶子节点在数组中索引
      * @param length 表示对多少个元素继续调整，length 会逐渐减少
      */
     public static void adjustHeap(int[] arr, int i, int length){
